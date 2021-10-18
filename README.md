@@ -17,3 +17,5 @@
   - build time transformation
   - supported by CRA by default
   - right webpack plugins will tweak the class names
+  
+  See usage with the `classnames` package.

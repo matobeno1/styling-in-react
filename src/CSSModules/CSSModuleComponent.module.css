@@ -14,3 +14,7 @@
     background-color: lightblue;
     color: blue;
 }
+
+.opened {
+    background-color: green;
+}

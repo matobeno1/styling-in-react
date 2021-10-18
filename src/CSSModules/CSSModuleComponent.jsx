@@ -1,9 +1,16 @@
-import React from "react";
+import React, {useState} from "react";
+import classNames from "classnames";
+
 import classes from "./CSSModuleComponent.module.css"
 
-export const CSSModuleComponent = ({
-    children = "Hello",
-    onClick
-}) => {
-    return <button className={classes.button} onClick={onClick}>{children}</button>
+export const CSSModuleComponent = () => {
+    const [isOpened, setIsOpened] = useState(false)
+    return (
+        <button
+            className={classNames(classes.button, {[classes.opened]: isOpened})}
+            onClick={() => setIsOpened(val => !val)}
+        >
+        {isOpened ? "opened" : "closed"}
+    </button>
+    )
 }
